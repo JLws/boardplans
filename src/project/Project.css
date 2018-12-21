@@ -1,0 +1,32 @@
+.project {
+	width: 20%;
+	height: 10%;
+	user-select: none;
+	-webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.skills-list {
+	margin: 0;
+
+	padding: 0;
+	list-style: none;
+}
+
+.skills-list li {
+
+
+	padding-left: .5em;
+
+	font-size: .8em;
+}
