@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Project from './project/prjitem';
-
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import App from './components/Project/App';
+import reducer from './reducers';
 import interact from 'interactjs';
 
 interact('.project')
@@ -17,7 +19,6 @@ interact('.project')
 		onend: function ( event ) {
 		}
 	});
-
 function dragMoveListener ( event ) {
 	var target = event.target,
 		x = ( parseFloat( target.getAttribute('data-x')) || 0 ) + event.dx,
@@ -31,8 +32,11 @@ function dragMoveListener ( event ) {
 }
 window.dragMoveListener = dragMoveListener;
 
-ReactDOM.render(<Project />, document.getElementsByClassName('objects')[0]);
+const store = createStore( reducer );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+ReactDOM.render(
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById('objects')
+);
