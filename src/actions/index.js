@@ -1,12 +1,12 @@
-let nextProjectId = 0;
+function makeActionCreator(type, ...argNames) {
+  return function(...args) {
+    let action = { type }
+    argNames.forEach((arg, index) => {
+      action[argNames[index]] = args[index]
+    })
+    return action
+  }
+}
 
-export const addProject = name => ({
-	type: 'ADD_PROJECT',
-	id: nextProjectId++,
-	name
-});
-
-export const selectProject = id => ({
-	type: 'SELECT_PROJECT',
-	id
-});
+export const addProject = makeActionCreator('ADD_PROJECT', 'name')
+export const selectProject = makeActionCreator('SELECT_PROJECT', 'id')
