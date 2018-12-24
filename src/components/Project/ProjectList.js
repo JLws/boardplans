@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Project from './Project';
-
 const ProjectList = ({ projects, selectProject }) => (
 	<>
 		{

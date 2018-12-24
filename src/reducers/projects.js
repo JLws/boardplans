@@ -9,7 +9,7 @@ const projects = ( state = [], action ) => {
 					id: id++,
 					name: action.name,
 					select: false
-				}	
+				}
 			];
 		case 'SELECT_PROJECT':
 			return state.map( project =>
@@ -17,9 +17,13 @@ const projects = ( state = [], action ) => {
 				? {...project, select: !project.select}
 				: project
 			);
+		case 'DELETE_PROJECTS':
+			return [];
 		default:
 			return state;
 	}
 }
+
+
 
 export default projects;

@@ -1,0 +1,21 @@
+.container {
+	background: none;
+}
+
+.container input {
+	width: 85%;
+	border-radius: 1em;
+
+	padding: .1em .5em;
+}
+
+.container button {
+	margin: .5em 0;
+	width: 90%;
+	border-radius: .2em;
+
+	overflow: hidden;
+
+	padding: .2em 0;
+	font-weight: bold;
+}

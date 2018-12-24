@@ -10,3 +10,4 @@ function makeActionCreator(type, ...argNames) {
 
 export const addProject = makeActionCreator('ADD_PROJECT', 'name')
 export const selectProject = makeActionCreator('SELECT_PROJECT', 'id')
+export const deleteProjects = makeActionCreator('DELETE_PROJECTS')

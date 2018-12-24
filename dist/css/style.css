@@ -24,7 +24,7 @@ body {
 	border: .4em solid black;
 	height: 50vh;
 	border-radius: .5em;
-	margin: .2em .5em;
+	margin: .2em 0 .2em .5em;
 	box-shadow: inset 0 0 1em black;
 	flex-grow: 1;
 
@@ -46,4 +46,30 @@ body {
 	margin-top: -1.3em;
 
 	text-align: center;
+}
+
+.control-menu {
+	flex-basis: 15%;
+
+	text-align: center;
+}
+
+.control-menu li {
+	border-left: .2em solid black;
+	border-right: .2em solid black;
+	margin: .2em .3em;
+	background: rgba(34,56,12, .5);
+
+	padding: .2em 0;
+
+	list-style: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.control-menu li:hover {
+	border-left: .2em solid red;
+	border-right: .2em solid red;
+
+	transition: .3s;
 }
