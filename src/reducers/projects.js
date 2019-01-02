@@ -8,13 +8,27 @@ const projects = ( state = [], action ) => {
 				{
 					id: id++,
 					name: action.name,
-					select: false
+					select: false,
+					isChild: false,
+					childs: []
 				}
 			];
+		case 'ADD_CATEGORY':
+			return state.map ( project =>
+				( project.id === action.id )
+				? {...project, childs: [...project.childs, action.name] }
+				: project
+				);
 		case 'SELECT_PROJECT':
 			return state.map( project =>
 				( project.id === action.id )
 				? {...project, select: !project.select}
+				: project
+			);
+		case 'TOGGLE_CHILD':
+			return state.map( project =>
+				( project.id === action.id )
+				? {...project, isChild: !project.isChild}
 				: project
 			);
 		case 'DELETE_PROJECTS':

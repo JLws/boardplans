@@ -1,24 +1,4 @@
-.container {
-	background: none;
-}
-
-.container input {
-	width: 85%;
-	border-radius: 1em;
-
-	padding: .1em .5em;
-}
-
-.container button {
-	margin: .5em 0;
-	width: 90%;
-	border-radius: .2em;
-
-	overflow: hidden;
-
-	padding: .2em 0;
-	font-weight: bold;
-}.project {
+.project {
 	position: absolute;
 	box-sizing: padding-box;
 	width: 10%;
@@ -42,4 +22,43 @@
 
 .selected {
 	border-top: .2em solid black;
+}.projects-list {
+	border: .2em solid black;
+	margin: 0 .3em;
+	max-height: 77%;
+	overflow: auto;
+}
+
+.projects-list li {
+	border: .2em solid black;
+	margin: .2em .4em;
+	
+	cursor: pointer;
+	list-style: none;
+}
+
+.category {
+	border: .2em solid red;
+	margin: .1em .2em;
+
+}.container {
+	background: none;
+}
+
+.container input {
+	width: 85%;
+	border-radius: 1em;
+
+	padding: .1em .5em;
+}
+
+.container button {
+	margin: .5em 0;
+	width: 90%;
+	border-radius: .2em;
+
+	overflow: hidden;
+
+	padding: .2em 0;
+	font-weight: bold;
 }

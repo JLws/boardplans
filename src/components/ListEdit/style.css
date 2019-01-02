@@ -1,0 +1,20 @@
+.projects-list {
+	border: .2em solid black;
+	margin: 0 .3em;
+	max-height: 77%;
+	overflow: auto;
+}
+
+.projects-list li {
+	border: .2em solid black;
+	margin: .2em .4em;
+	
+	cursor: pointer;
+	list-style: none;
+}
+
+.category {
+	border: .2em solid red;
+	margin: .1em .2em;
+
+}

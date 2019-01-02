@@ -9,14 +9,14 @@ const AddProject = ({ dispatch }) => {
 		<div className="container">
 			<form onSubmit={ e => {
 				e.preventDefault();
-				if ( !input.value.trim()) {
+				if ( !input.value.trim() ) {
 					return;
 				}
 				dispatch( addProject( input.value ) );
 				input.value = '';
 			}}>
 				<input ref={node => input = node} />
-				<button type="submit">Додати</button>
+				<button type="submit">Add</button>
 			</form>
 		</div>
 	);

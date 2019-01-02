@@ -7,20 +7,14 @@ export class Menu extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			toggleAdd: false,
-			toggleDelete: false,
-			func: props.dispatch
+			toggleAdd: false
 		}
 		this.onToggleAdd = this.onToggleAdd.bind(this);
-		this.onToggleDelete = this.onToggleDelete.bind(this);
+		this.onDelete = () => this.props.deleteAll();
 	}
 
 	onToggleAdd () {
 		this.setState( state => ({ toggleAdd: !this.state.toggleAdd }) );
-	}
-
-	onToggleDelete () {
-		this.state.func( deleteProjects( ) );
 	}
 
 	render() {
@@ -31,10 +25,14 @@ export class Menu extends React.Component {
 					this.state.toggleAdd &&
 					<AddProject />
 				}
-				<li onClick={ this.onToggleDelete }>Delete all</li>
+				<li onClick={ this.onDelete }>Delete all</li>
 			</>
 		);
 	}
 }
 
-export default connect()(Menu);
+const mapDispatchToProps = {
+	deleteAll: deleteProjects,
+}
+
+export default connect(null, mapDispatchToProps)(Menu);

@@ -19,7 +19,7 @@ ProjectList.propTypes = {
 	projects: PropTypes.arrayOf( PropTypes.shape({
 		id: PropTypes.number.isRequired,
 		name: PropTypes.string.isRequired,
-		select: PropTypes.bool.isRequired
+		select: PropTypes.bool.isRequired,
 	}).isRequired).isRequired,
 	selectProject: PropTypes.func.isRequired
 };
