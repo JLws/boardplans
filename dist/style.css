@@ -36,7 +36,16 @@
 	list-style: none;
 }
 
-.projects-list li > span {
+.head-control {
+	display: flex;
+	justify-content: space-around;
+
+	padding: .15em;
+}
+
+.head-control > span {
+	flex-grow: 1;
+
 	cursor: pointer;
 }
 

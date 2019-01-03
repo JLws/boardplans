@@ -36,9 +36,11 @@ const projects = ( state = [ { id: 0, name: 'name', select: false, isChild: true
 		case 'DELETE_CATEGORY':
 			return state.map( project => 
 				( project.id === action.id )
-				? {...project, childs: project.childs.filter( child => child !== action.child )}
+				? {...project, childs: project.childs.filter( (child, id) => id !== action.childID )}
 				: project
 			);
+		case 'DELETE_PROJECT':
+			return state.filter( project => project.id !== action.id );
 		default:
 			return state;
 	}

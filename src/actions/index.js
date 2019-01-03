@@ -9,8 +9,9 @@ function makeActionCreator(type, ...argNames) {
 }
 
 export const addProject = makeActionCreator('ADD_PROJECT', 'name')
-export const addCategory = makeActionCreator('ADD_CATEGORY', 'id', 'name')
+export const deleteProjects = makeActionCreator('DELETE_PROJECTS')
+export const deleteProject = makeActionCreator('DELETE_PROJECT', 'id')
 export const selectProject = makeActionCreator('SELECT_PROJECT', 'id')
 export const toggleChild = makeActionCreator('TOGGLE_CHILD', 'id')
-export const deleteProjects = makeActionCreator('DELETE_PROJECTS')
-export const deleteCategory = makeActionCreator('DELETE_CATEGORY', 'id', 'child')
+export const addCategory = makeActionCreator('ADD_CATEGORY', 'id', 'name')
+export const deleteCategory = makeActionCreator('DELETE_CATEGORY', 'id', 'childID')
