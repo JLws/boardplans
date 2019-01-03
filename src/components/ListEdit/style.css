@@ -9,12 +9,26 @@
 	border: .2em solid black;
 	margin: .2em .4em;
 	
-	cursor: pointer;
 	list-style: none;
 }
 
+.projects-list li > span {
+	cursor: pointer;
+}
+
 .category {
+	display: flex;
+	justify-content: space-around;
 	border: .2em solid red;
 	margin: .1em .2em;
 
+	padding: .15em;
+}
+
+.cat-name {
+	flex-grow: 1;
+}
+
+.button-delete {
+	cursor: pointer;
 }

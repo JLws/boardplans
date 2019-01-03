@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addCategory } from '../../actions';
+import { addCategory, deleteCategory } from '../../actions';
 import Category from './Category';
 
 class Project extends Component {
@@ -29,7 +29,7 @@ class Project extends Component {
 						<div>
 							{
 								childs.map ( (child, i) =>
-									<Category key={i} name={child} />
+									<Category key={i} name={child} onDelete={() => this.props.dispatch(deleteCategory(id, child))} />
 								)
 							}
 						</div>

@@ -1,6 +1,6 @@
 let id = 0
 
-const projects = ( state = [], action ) => {
+const projects = ( state = [ { id: 0, name: 'name', select: false, isChild: true, childs: [ 'hello' ] }], action ) => {
 	switch ( action.type ) {
 		case 'ADD_PROJECT':
 			return [
@@ -33,6 +33,12 @@ const projects = ( state = [], action ) => {
 			);
 		case 'DELETE_PROJECTS':
 			return [];
+		case 'DELETE_CATEGORY':
+			return state.map( project => 
+				( project.id === action.id )
+				? {...project, childs: project.childs.filter( child => child !== action.child )}
+				: project
+			);
 		default:
 			return state;
 	}
